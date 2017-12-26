@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   has_many :attendees
   has_many :events, through: :attendees
+
+  has_many :skills
+  has_many :categories, through: :skills
 end
