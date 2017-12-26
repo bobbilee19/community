@@ -1,0 +1,37 @@
+%h1 Listing events
+
+%table
+  %thead
+    %tr
+      %th Date
+      %th Theme
+      %th Venue name
+      %th State
+      %th City
+      %th Country
+      %th Venue contact email
+      %th Venue contact name
+      %th Rent again
+      %th
+      %th
+      %th
+
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= event.date
+        %td= event.theme
+        %td= event.venue_name
+        %td= event.state
+        %td= event.city
+        %td= event.country
+        %td= event.venue_contact_email
+        %td= event.venue_contact_name
+        %td= event.rent_again
+        %td= link_to 'Show', event
+        %td= link_to 'Edit', edit_event_path(event)
+        %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Event', new_event_path

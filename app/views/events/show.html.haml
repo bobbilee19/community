@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @event.date
+%p
+  %b Theme:
+  = @event.theme
+%p
+  %b Venue name:
+  = @event.venue_name
+%p
+  %b State:
+  = @event.state
+%p
+  %b City:
+  = @event.city
+%p
+  %b Country:
+  = @event.country
+%p
+  %b Venue contact email:
+  = @event.venue_contact_email
+%p
+  %b Venue contact name:
+  = @event.venue_contact_name
+%p
+  %b Rent again:
+  = @event.rent_again
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path
