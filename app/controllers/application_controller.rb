@@ -7,7 +7,9 @@ class ApplicationController < ActionController::Base
     #   #admin_root_path
     #   '/admin/dashboard'
     #   puts'in admin_root_path'
-    event = current_user.events.last
+    # CHANGE eventually this to your events index and then you
+    # click on the event you want to see
+    events = current_user.events.last
     event_path(event)
   end
 
