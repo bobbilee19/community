@@ -28,6 +28,10 @@
   %b Rent again:
   = @event.rent_again
 
+%p
+  %b Attendees:
+  = render @event.attendees
+
 = link_to 'Edit', edit_event_path(@event)
 \|
 = link_to 'Back', events_path

@@ -1,0 +1,18 @@
+%h1 Listing attendees
+
+%table
+  %thead
+    %tr
+      %th User
+      %th
+      %th
+
+  %tbody
+    - attendees.each do |attendee|
+      %tr
+        %td= attendee.user
+        %td= link_to 'Destroy', attendee, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Attendee', new_event_attendee_path(event)
