@@ -21,6 +21,11 @@ class AttendeesController < ApplicationController
   #   end
   # end
 
+  def show
+    attendee = Attendee.find(params[:id])
+    @attendee = attendee.user
+  end
+
   def destroy
     @attendee.destroy
     respond_to do |format|

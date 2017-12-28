@@ -1,4 +1,4 @@
 %ul
   %li
-    = attendee.user.first_name
+    = link_to attendee.user.first_name, event_attendee_path(attendee)
     = attendee.user.last_name
