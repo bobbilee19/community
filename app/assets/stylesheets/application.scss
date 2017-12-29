@@ -15,3 +15,14 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.attendees-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.attendee-row {
+}

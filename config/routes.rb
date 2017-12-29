@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :skills
   resources :categories
   resources :events do
     resources :attendees
   end
+  resources :skills
   devise_for :users
 
   get 'welcome/home'

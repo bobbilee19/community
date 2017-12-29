@@ -9,4 +9,13 @@ class User < ApplicationRecord
 
   has_many :skills
   has_many :categories, through: :skills
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def abbreviated_name
+    # take first letter
+    "#{first_name} #{first_letter_last_name}."
+  end
 end

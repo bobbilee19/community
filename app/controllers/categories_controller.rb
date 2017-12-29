@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    # @attendee = Attendee.find()
   end
 
   def new
@@ -50,11 +51,11 @@ class CategoriesController < ApplicationController
   end
 
   private
-    def set_category
-      @category = Category.find(params[:id])
-    end
+  def set_category
+    @category = Category.find(params[:id])
+  end
 
-    def category_params
-      params.require(:category).permit(:name)
-    end
+  def category_params
+    params.require(:category).permit(:name)
+  end
 end

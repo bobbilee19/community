@@ -4,10 +4,7 @@
   %b Date:
   = @event.date
 %p
-  %b Theme:
-  = @event.theme
-%p
-  %b Venue name:
+  %b Venue:
   = @event.venue_name
 %p
   %b State:
@@ -15,22 +12,19 @@
 %p
   %b City:
   = @event.city
-%p
-  %b Country:
-  = @event.country
-%p
-  %b Venue contact email:
-  = @event.venue_contact_email
-%p
-  %b Venue contact name:
-  = @event.venue_contact_name
-%p
-  %b Rent again:
-  = @event.rent_again
+
+.attendees-index
+  %b Attendees:
+  %ul
+  - @event.attendees.each do |attendee|
+    .attendee-row
+      %li= link_to attendee.full_name, event_attendee_path(@event, attendee)
 
 %p
-  %b Attendees:
-  = render @event.attendees
+  %b Skills at this event:
+  %ul
+  - @event.attendee_skills.each do |skill|
+    %li= skill
 
 = link_to 'Edit', edit_event_path(@event)
 \|

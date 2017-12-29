@@ -1,4 +1,3 @@
 %ul
   %li
-    = link_to attendee.user.first_name, event_attendee_path(attendee)
-    = attendee.user.last_name
+    = link_to attendee.full_name, event_attendee_path(@event, attendee)
