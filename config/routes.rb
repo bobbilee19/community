@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :categories
   resources :events do
     resources :attendees
   end
+  resources :categories
   resources :skills
   devise_for :users
 

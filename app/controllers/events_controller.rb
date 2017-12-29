@@ -5,10 +5,6 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  # def show
-  #   @event = Event.find_by_name
-  # end
-
   def new
     @event = Event.new
   end

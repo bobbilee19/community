@@ -23,7 +23,5 @@
         %b Website
         - if user.personal_website.present?
           = user.personal_website
-      %p
-        %b= link_to "See Profile", event_attendee_path(user.id)
 
 = link_to 'Back', events_path
