@@ -37,7 +37,8 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem "haml-rails", "~> 1.0"
 gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', require: false
+gem 'fog-aws', require: false # or require: 'fog/aws'
 gem 'mini_magick', '~> 4.3'
 gem 'csv-importer'
 

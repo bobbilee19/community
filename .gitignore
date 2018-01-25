@@ -19,6 +19,7 @@
 
 # Ignore all images
 /public/uploads/
+/config/aws.yml
 
 # Ignore Byebug command history file.
 .byebug_history
