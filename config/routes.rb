@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
   resources :categories
   resources :skills
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
   get 'welcome/home'
   root 'welcome#home'

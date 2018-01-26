@@ -6,9 +6,9 @@ class User < ApplicationRecord
 
   has_many :attendees
   has_many :events, through: :attendees
-
   has_many :skills
   has_many :categories, through: :skills
+  has_one_attached :image
 
   def full_name
     "#{first_name} #{last_name}"

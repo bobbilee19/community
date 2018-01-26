@@ -10,6 +10,7 @@
   %tbody
     - attendees.each do |attendee|
       %tr
+        %td= attendee.user.image
         %td= attendee.user
         %td= link_to 'Destroy', attendee, method: :delete, data: { confirm: 'Are you sure?' }
 
